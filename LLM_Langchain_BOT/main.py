@@ -184,7 +184,7 @@ st.write("""
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-%23181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/XAheli/Medi_Bud)
 [![Aheli Poddar LinkedIn](https://img.shields.io/badge/Aheli%20Poddar-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahelipoddar/)
 [![Sourabh Dey LinkedIn](https://img.shields.io/badge/Sourabh%20Dey-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sourabh-dey/)
-![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Flangchain-chatbot.streamlit.app&label=Visitors&labelColor=%235d5d5d&countColor=%231e7ebf&style=for-the-badge)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=XAheli%2FMedi_Bud&label=Visitors&labelColor=%235d5d5d&countColor=%231e7ebf&style=for-the-badge&reset=true)
 """)
 
 
