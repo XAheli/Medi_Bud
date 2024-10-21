@@ -240,10 +240,10 @@ st.markdown("""
 
 
 # Navigation Buttons
-if st.button("🧠 Med Bud With Memory"):
-    st.switch_page("pages/1 🧠 Med_Bud_With_Memory.py")
-if st.button("🌐 Med Bud With Web Access"):
-    st.switch_page("pages/2 🌐 Med_Bud_With_Web_Access.py")
+if st.button("🧠 Medi Bud With Memory"):
+    st.switch_page("pages/1 🧠 Medi_Bud_With_Memory.py")
+if st.button("🌐 Medi Bud With Web Access"):
+    st.switch_page("pages/2 🌐 Medi_Bud_With_Web_Access.py")
 if st.button("💊 Prescription Decoder"):
     st.switch_page("pages/3 💊 Prescription_Decoder.py")
 
