@@ -24,6 +24,7 @@
 > **Note**: This chatbot is intended for **informational purposes only**. Always consult a healthcare professional for any medical advice.
 
 ---
+<img src="LLM_Langchain_BOT/Medi_Bud_dashboard.png" alt="Medi Bud Logo" style="width: 510px; margin: 20px auto; display: block;">
 
 ## Key Features
 
