@@ -12,7 +12,7 @@ GOOGLE_API_KEY = os.getenv("API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Streamlit page configuration
-st.set_page_config(page_title="Med Bud Prescription Solver", page_icon="💊")
+st.set_page_config(page_title="Medi Bud Prescription Solver", page_icon="💊")
 
 st.title("💊 Prescription Uploader Bot")
 st.caption("Upload a prescription image and ask questions about it!")
