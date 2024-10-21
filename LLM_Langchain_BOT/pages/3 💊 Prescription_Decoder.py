@@ -16,6 +16,8 @@ st.set_page_config(page_title="Med Bud Prescription Solver", page_icon="💊")
 
 st.title("💊 Prescription Uploader Bot")
 st.caption("Upload a prescription image and ask questions about it!")
+st.write('[![View Source Code](https://img.shields.io/badge/View%20Source%20Code-%2300A7E1.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/XAheli/Medi_Bud)')
+
 
 @st.cache_resource
 def load_gemini_model():
