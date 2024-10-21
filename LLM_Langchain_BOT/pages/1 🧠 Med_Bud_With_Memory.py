@@ -8,7 +8,7 @@ from langchain_community.vectorstores import DocArrayInMemorySearch
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-st.set_page_config(page_title="Med Bud Chatbot", page_icon="⚕️")
+st.set_page_config(page_title="Medi Bud Chatbot", page_icon="⚕️")
 st.header('AI-Powered Virtual Health Assistant')
 st.write('Providing preliminary consultations and answering health-related queries for patients in remote areas.')
 st.write('[![View Source Code](https://img.shields.io/badge/View%20Source%20Code-%2300A7E1.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/XAheli/Medi_Bud)')
