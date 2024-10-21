@@ -9,9 +9,9 @@ from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 
 logger = get_logger('Langchain-Chatbot')
 
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 # Load environment variables from the .env file
-load_dotenv()
+#load_dotenv()
 
 #decorator
 def enable_chat_history(func):
