@@ -181,11 +181,24 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 # Author Details
 st.write("""
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-%23181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/XAheli/Medi_Bud)
-[![Aheli Poddar LinkedIn](https://img.shields.io/badge/Aheli%20Poddar-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahelipoddar/)
-[![Sourabh Dey LinkedIn](https://img.shields.io/badge/Sourabh%20Dey-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sourabh-dey/)
-![Visitors](https://api.visitorbadge.io/api/visitors?path=XAheli%2FMedi_Bud&label=Visitors&labelColor=%235d5d5d&countColor=%231e7ebf&style=for-the-badge&reset=true)
-""")
+<div align="center" style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <a href="https://github.com/XAheli/Medi_Bud" target="_blank">
+            <img src="https://img.shields.io/badge/GitHub-Repository-%23181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" style="height: 24px;">
+        </a>
+        <a href="https://www.linkedin.com/in/ahelipoddar/" target="_blank">
+            <img src="https://img.shields.io/badge/Aheli%20Poddar-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Aheli Poddar LinkedIn" style="height: 24px;">
+        </a>
+        <a href="https://www.linkedin.com/in/sourabh-dey/" target="_blank">
+            <img src="https://img.shields.io/badge/Sourabh%20Dey-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Sourabh Dey LinkedIn" style="height: 24px;">
+        </a>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 5px; margin-top: 8px;">
+        <span style="font-size: 12px; color: #5d5d5d;">𝗬𝗼𝘂 𝗮𝗿𝗲 𝘃𝗶𝘀𝗶𝘁𝗼𝗿</span>
+        <img src="https://profile-counter.glitch.me/Medi_Bud_Streamlit/count.svg" alt="visitor count" style="height: 24px;"/>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 
 # Features Section
