@@ -1,4 +1,5 @@
 # Medi_Bud
+# RAG BASED LLM MEDICAL SEARCH BOT
 
 ## Chatbot Implementations with Langchain + Streamlit
 
