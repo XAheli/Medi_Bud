@@ -4,9 +4,14 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-red.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v2/open-source.svg)](https://github.com/firstcontributions/open-source-badges) 
+[![Frontend](https://img.shields.io/badge/Frontend-Streamlit-pink.svg)](https://streamlit.io/)
+[![Framework](https://img.shields.io/badge/Framework-LangChain-yellow.svg)](https://langchain.com/)
+
 
 [![linkedin ](https://img.shields.io/badge/Aheli%20Poddar-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahelipoddar/) 
 [![linkedin ](https://img.shields.io/badge/Sourabh%20Dey-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sourabh-dey/) 
+
+If you find this project helpful, please consider giving it a ⭐ !
 
 ---
 
@@ -24,7 +29,11 @@
 > **Note**: This chatbot is intended for **informational purposes only**. Always consult a healthcare professional for any medical advice.
 
 ---
+<div align="center">
+
 <img src="LLM_Langchain_BOT/Medi_Bud_dashboard.png" alt="Medi Bud Logo" style="width: 510px; margin: 20px auto; display: block;">
+
+<div align="left">
 
 ## Key Features
 
@@ -64,25 +73,6 @@
 
 ---
 
-## Project Structure
-
-Medi Bud is built as a modular system with the following main components:
-
-### 1. Home Page
-- The introductory page that welcomes the user and allows them to upload medical files.
-- Includes a medical disclaimer to ensure users are aware of the limitations of the chatbot.
-
-### 2. Med Bud With Memory
-- A more advanced version of Medi Bud where chat memory is enabled, making the chatbot able to remember past interactions within the session and respond in a more contextually aware manner.
-
-### 3. Med Bud With Internet Access
-- This version of Medi Bud has access to the internet, allowing it to fetch real-time medical information, making it ideal for health-related research and answering queries that require up-to-date data.
-
-### 4. Enhanced OCR Query
-- This module allows users to upload images of prescriptions or medical documents. Medi Bud processes the images using OCR technology and answers questions related to the content, such as identifying medications, dosages, or usage instructions.
-
----
-
 ## Installation
 
 To set up the project locally, follow the steps below:
@@ -91,3 +81,35 @@ To set up the project locally, follow the steps below:
    ```bash
    git clone https://github.com/XAheli/Medi_Bud.git
    cd Medi_Bud
+
+2. **Create and activate a virtual environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. **Install the required dependencies**:
+   ```bash
+   pip install -r requirements.txt
+
+4. **Run the Streamlit app**:
+   ```bash
+   streamlit run main.py
+
+---
+
+## Contributions
+
+Contributions are welcome! If you'd like to contribute to the Medi Bud project, please follow these steps:
+
+- Fork the repository on GitHub.
+- Create a new branch for your feature or bug fix.
+- Make your changes and test thoroughly.
+- Submit a pull request with a clear description of your changes.
+
+We appreciate your interest in improving Medi Bud!
+
+---
+
+## Disclaimers
+
+Medi Bud is designed for informational and educational purposes only and should not be considered a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified healthcare providers for any medical conditions or health concerns.
