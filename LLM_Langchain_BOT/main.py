@@ -186,11 +186,11 @@ st.write("""
         <a href="https://github.com/XAheli/Medi_Bud" target="_blank">
             <img src="https://img.shields.io/badge/GitHub-Repository-%23181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" style="height: 24px;">
         </a>
-        <a href="https://www.linkedin.com/in/ahelipoddar/" target="_blank">
-            <img src="https://img.shields.io/badge/Aheli%20Poddar-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Aheli Poddar LinkedIn" style="height: 24px;">
-        </a>
         <a href="https://www.linkedin.com/in/sourabh-dey/" target="_blank">
             <img src="https://img.shields.io/badge/Sourabh%20Dey-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Sourabh Dey LinkedIn" style="height: 24px;">
+        </a>
+        <a href="https://www.linkedin.com/in/ahelipoddar/" target="_blank">
+            <img src="https://img.shields.io/badge/Aheli%20Poddar-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Aheli Poddar LinkedIn" style="height: 24px;">
         </a>
     </div>
     <div style="display: flex; justify-content: center; align-items: center; gap: 5px; margin-top: 8px;">
@@ -199,7 +199,6 @@ st.write("""
     </div>
 </div>
 """, unsafe_allow_html=True)
-
 
 # Features Section
 st.markdown("""
@@ -239,14 +238,33 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Navigation Buttons
+# Navigation Buttons with Info Sections
+st.header("Medi Bud - Choose Your Assistant")
+
+# Medi Bud With Memory
 if st.button("🧠 Medi Bud With Memory"):
     st.switch_page("pages/1 🧠 Medi_Bud_With_Memory.py")
+with st.expander(":red[ℹ️ More info about Medi Bud With Memory]"):
+    st.info("""
+This feature allows you to ask general medical queries. Additionally, you can upload a small medical PDF document (< 1MB), and the assistant will respond based on its contents. 
+Use this feature to ask personalized medical questions about your reports or prescriptions.
+""")
+
+# Medi Bud With Web Access
 if st.button("🌐 Medi Bud With Web Access"):
     st.switch_page("pages/2 🌐 Medi_Bud_With_Web_Access.py")
+with st.expander(":red[ℹ️ More info about Medi Bud With Web Access]"):
+    st.info("""
+This feature lets you ask medical queries using the latest information available on the web. You can inquire about recent medical news, treatments, or medicines, and it will search the web to provide updated responses.
+""")
+
+# Prescription Decoder
 if st.button("💊 Prescription Decoder"):
     st.switch_page("pages/3 💊 Prescription_Decoder.py")
-
+with st.expander(":red[ℹ️ More info about Prescription Decoder]"):
+    st.info("""
+With this feature, you can upload a medical prescription that may be difficult to read or interpret due to handwriting or medical abbreviations. The assistant will help you understand the prescription and provide clear answers to any related questions.
+""")
 
 # Footer
 st.markdown("""
