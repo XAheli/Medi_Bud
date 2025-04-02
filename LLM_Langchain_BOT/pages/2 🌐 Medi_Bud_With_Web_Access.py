@@ -10,11 +10,11 @@ from langchain.agents import AgentExecutor, create_react_agent
 from langchain_core.tools import Tool
 
 st.set_page_config(page_title="Medi Bud RAG Net", page_icon="🌎")
-st.header('AI Medcal bot with Web Access')
+st.header('AI Med bot with Web Access')
 st.write('Equipped with internet access, enables users to ask questions about recent events')
 st.write('[![View Source Code](https://img.shields.io/badge/View%20Source%20Code-%2300A7E1.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/XAheli/Medi_Bud)')
-
-
+st.caption("Try to ask those things which are small to answer.. since this is just a prototype")
+st.caption("Fun Fact: Apart from medical queries... It can solve Maths also...Try it! ")
 class InternetChatbot:
 
     def __init__(self):
@@ -46,20 +46,28 @@ class InternetChatbot:
     def main(self):
         agent_executor, memory = self.setup_agent()
         user_query = st.chat_input(placeholder="Ask me anything!")
-        if user_query:
-            utils.display_msg(user_query, 'user')
-            with st.chat_message("assistant"):
-                st_cb = StreamlitCallbackHandler(st.container())
-                result = agent_executor.invoke(
-                    {"input": user_query, "chat_history": memory.chat_memory.messages},
-                    {"callbacks": [st_cb]}
-                )
-                response = result["output"]
-                st.session_state.messages.append({"role": "assistant", "content": response})
-                st.write(response)
-                utils.print_qa(InternetChatbot, user_query, response)
-
+        try:
+            if user_query:
+                utils.display_msg(user_query, 'user')
+                with st.chat_message("assistant"):
+                    st_cb = StreamlitCallbackHandler(st.container())
+                    result = agent_executor.invoke(
+                        {"input": user_query, "chat_history": memory.chat_memory.messages},
+                        {"callbacks": [st_cb]}
+                    )
+                    response = result["output"]
+                    st.session_state.messages.append({"role": "assistant", "content": response})
+                    st.write(response)
+                    utils.print_qa(InternetChatbot, user_query, response)
+        except:
+            st.warning("Some error occured due to large requests fetching... please try something less complex or simpler for the model to react")
+            #utils.print_qa(InternetChatbot, user_query, response)
+                
 
 if __name__ == "__main__":
-    obj = InternetChatbot()
-    obj.main()
+    try:
+        obj = InternetChatbot()
+        obj.main()
+    except Exception as e:
+        st.warning("Section Under Maintenance,Comeback Later!Check our Prescription decoder section until that!")
+        st.info(f"Error details: {e}")
