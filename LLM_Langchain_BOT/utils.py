@@ -61,7 +61,7 @@ def choose_custom_openai_key():
         st.info("Obtain your key from this link: https://platform.openai.com/account/api-keys")
         st.stop()
 
-    model = "gpt-4o-mini"
+    model = "gpt-4o"
     try:
         client = openai.OpenAI(api_key=openai_api_key)
         available_models = [{"id": i.id, "created":datetime.fromtimestamp(i.created)} for i in client.models.list() if str(i.id).startswith("gpt")]
@@ -83,8 +83,8 @@ def choose_custom_openai_key():
     return model, openai_api_key
 
 def configure_llm():
-    available_llms = ["gpt-4o-mini","llama3.2:3b","gemini","use your openai api key"]
-    #available_llms = ["gpt-4o-mini","gemini","use your openai api key"]
+    available_llms = ["gpt","llama3.2:3b","gemini","use your openai api key"]
+    #available_llms = ["gpt-4o","gemini","use your openai api key"]
     llm_opt = st.sidebar.radio(
         label="LLM",
         options=available_llms,
@@ -94,12 +94,12 @@ def configure_llm():
     # if llm_opt == "llama3.1:8b":
         # llm = ChatOllama(model="llama3.1", base_url=os.getenv["OLLAMA_ENDPOINT"])
     if llm_opt == "llama3.2:3b":
-        llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, streaming=True, api_key=st.secrets["OLLAMA_ENDPOINT_KEY"])
-    elif llm_opt == "gpt-4o-mini":
+        llm = ChatOpenAI(model_name="gpt-4o", temperature=0, streaming=True, api_key=st.secrets["OLLAMA_ENDPOINT_KEY"])
+    elif llm_opt == "gpt":
         #llm = ChatOpenAI(model_name=llm_opt, temperature=0, streaming=True, api_key=os.getenv["OPENAI_API_KEY"])
-        llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, streaming=True, api_key=st.secrets["OPENAI_API_KEY"])
+        llm = ChatOpenAI(model_name="gpt-4o", temperature=0, streaming=True, api_key=st.secrets["OPENAI_API_KEY"])
     elif llm_opt == "gemini":
-        llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, streaming=True, api_key=st.secrets["GEMINI_API_KEY"])
+        llm = ChatOpenAI(model_name="gpt-4o", temperature=0, streaming=True, api_key=st.secrets["GEMINI_API_KEY"])
     else:
         model, openai_api_key = choose_custom_openai_key()
         llm = ChatOpenAI(model_name=model, temperature=0, streaming=True, api_key=openai_api_key)
@@ -120,6 +120,6 @@ def sync_st_session():
         
 def get_prompt_template():
     template = f"""You are an AI-powered Virtual Health Assistant designed to provide preliminary consultations and answer health-related queries for patients in remote areas. Use the chat history and the user's question to provide a helpful, accurate, and empathetic response. If the query involves a medical emergency, always advise the user to seek immediate professional medical help."""
-
+    return template
 # Chat History:
 # {chat_history}"""
